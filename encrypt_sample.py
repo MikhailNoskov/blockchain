@@ -8,7 +8,7 @@ def solve_puzzle(string: str, leading_zeroes: int):
         data = string + nonce_str
         hash_string = hashlib.sha256(data.encode()).hexdigest()
         if hash_string.startswith("0" * leading_zeroes):
-            return nonce, hash_value
+            return nonce, hash_string
         nonce += 1
 
 
